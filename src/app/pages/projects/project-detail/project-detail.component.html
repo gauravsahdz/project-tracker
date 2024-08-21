@@ -1,0 +1,48 @@
+<div class="detail-container">
+  <div class="project-header">
+    <div class="project-info">
+      <h2>
+        <span class="icon">
+          <img
+            src="assets/icons/back.svg"
+            alt="Back"
+            height="20px"
+            (click)="onBack()"
+          />
+        </span>
+        {{ project.title }}
+      </h2>
+      <div class="team">
+        <img src="https://i.pravatar.cc/300" alt="Avatar" />
+        <img src="https://i.pravatar.cc/400" alt="Avatar" />
+        <img src="https://i.pravatar.cc/500" alt="Avatar" />
+        <img src="https://i.pravatar.cc/600" alt="Avatar" />
+        <span class="more-members">+2</span>
+        <span class="status ontrack">OnTrack</span>
+      </div>
+    </div>
+    <div class="task-controls">
+      <app-button #assignButton> Assign Task </app-button>
+      <div class="time">
+        <div class="time-spent">
+          <span class="icon">⏰</span>
+          2M : 0W : 0D
+        </div>
+        <div class="deadline">
+          <span class="icon">📅</span>
+          6M : 0W : 0D
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="task-list">
+    <app-task-card *ngFor="let task of tasks" [task]="task"> </app-task-card>
+  </div>
+  <p *ngIf="!tasks.length" class="hint">Press assign to add task.</p>
+
+  <div class="footer-info" *ngIf="tasks.length">
+    <span>📋 {{ totalTasks }} tasks</span>
+    <span>📁 15 files</span>
+  </div>
+</div>

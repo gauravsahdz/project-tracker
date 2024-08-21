@@ -1,0 +1,46 @@
+<div class="project-card" (click)="handleClick()">
+  <div>
+    <div class="header">
+      <h3 class="title">
+        {{ project.title }}
+        <span
+          class="edit-icon"
+          aria-label="Edit"
+          (click)="handleEdit('wew', $event)"
+        >
+          <img src="assets/icons/edit.svg" alt="Edit" height="20px" />
+        </span>
+        <span
+          class="edit-icon"
+          aria-label="Edit"
+          (click)="handleDelete($event)"
+        >
+          <img src="assets/icons/delete.svg" alt="Edit" height="20px" />
+        </span>
+      </h3>
+      <span class="status offtrack">{{ project.priority }}</span>
+    </div>
+    <p class="description">
+      {{ project.description }}
+    </p>
+  </div>
+  <div class="footer">
+    <div class="deadline">
+      <span class="icon"
+        ><img src="assets/icons/hour_glass.svg" alt="hour_glass" height="20px"
+      /></span>
+      {{ project.dueDate }} Left
+    </div>
+    <div class="assignees">
+      <img src="https://i.pravatar.cc/300" alt="Assignee 1" />
+      <img src="https://i.pravatar.cc/400" alt="Assignee 2" />
+      <img src="https://i.pravatar.cc/500" alt="Assignee 3" />
+      <img src="https://i.pravatar.cc/600" alt="Assignee 4" />
+      <span class="more-assignees">+4</span>
+    </div>
+    <div class="issues">
+      <span class="icon">🗒️</span>
+      {{ project.totalTasks }} issues
+    </div>
+  </div>
+</div>

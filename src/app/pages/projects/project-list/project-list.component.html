@@ -1,0 +1,13 @@
+<div class="dashboard">
+  <div class="content">
+    <div class="dashboard-header">
+      <h1>Project</h1>
+      <app-button #createButton> Create </app-button>
+    </div>
+    <div class="project-list" *ngIf="projects.length">
+      <app-card *ngFor="let project of projects" [project]="project"></app-card>
+    </div>
+    <p *ngIf="!projects.length" class="hint">Press create to add project.</p>
+  </div>
+  <app-pagination [totalPages]="pages" *ngIf="pages > 1"></app-pagination>
+</div>

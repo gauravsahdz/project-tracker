@@ -1,0 +1,11 @@
+<div class="pagination">
+  <button class="navigation">Prev</button>
+  <button
+    class="page"
+    *ngFor="let page of [].constructor(totalPages); let i = index"
+  >
+    {{ i + 1 }}
+  </button>
+
+  <button class="navigation">Next</button>
+</div>

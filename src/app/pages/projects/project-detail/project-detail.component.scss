@@ -1,0 +1,207 @@
+.detail-container {
+  padding: 10px 20px;
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+
+    .project-info {
+      h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+
+        .icon {
+          margin-right: 10px;
+          cursor: pointer;
+          background-color: rgb(212, 208, 208);
+          padding: 2px 5px;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+          }
+        }
+
+        .hint {
+          font-size: 1rem;
+          margin-top: 100px;
+          color: #666;
+        }
+      }
+
+      .team {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 5px;
+        }
+
+        .more-members {
+          font-size: 16px;
+          color: #555;
+          margin-left: 10px;
+        }
+
+        .status {
+          background-color: #d4edda;
+          color: #28a745;
+          padding: 5px 10px;
+          border-radius: 10px;
+          margin-left: 10px;
+
+          &.ontrack {
+            background-color: #c3e6cb;
+          }
+        }
+      }
+    }
+
+    .task-controls {
+      display: flex;
+      align-items: center;
+
+      .time {
+        display: flex;
+        flex-direction: column;
+
+        .time-spent,
+        .deadline {
+          display: flex;
+          align-items: center;
+
+          .icon {
+            margin-right: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #555;
+  }
+
+  // Media queries for responsiveness
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    .project-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+
+      .project-info {
+        h2 {
+          font-size: 20px;
+        }
+
+        .team {
+          img {
+            width: 35px;
+            height: 35px;
+          }
+
+          .more-members {
+            font-size: 14px;
+            margin-left: 8px;
+          }
+
+          .status {
+            font-size: 12px;
+            padding: 4px 8px;
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .task-controls {
+        margin-top: 15px;
+        flex-direction: row;
+
+        .time {
+          .time-spent,
+          .deadline {
+            font-size: 14px;
+
+            .icon {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-info {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 5px;
+
+    .project-header {
+      padding: 10px;
+
+      .project-info {
+        h2 {
+          font-size: 18px;
+        }
+
+        .team {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+
+          .more-members {
+            font-size: 12px;
+          }
+
+          .status {
+            font-size: 10px;
+            padding: 3px 6px;
+          }
+        }
+      }
+
+      .task-controls {
+        .time {
+          .time-spent,
+          .deadline {
+            font-size: 12px;
+
+            .icon {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-info {
+      font-size: 12px;
+    }
+  }
+}

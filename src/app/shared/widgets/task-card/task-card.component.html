@@ -1,0 +1,37 @@
+<div class="task-card">
+  <div class="task-info">
+    <div class="task-title">
+      <span class="icon">💡</span>
+      <h3>{{ task.title }}</h3>
+      <span
+        class="edit-icon"
+        aria-label="Edit"
+        (click)="handleEdit('wew', $event)"
+      >
+        <img src="assets/icons/edit.svg" alt="Edit" height="20px" />
+      </span>
+      <span class="edit-icon" aria-label="Edit" (click)="handleDelete($event)">
+        <img src="assets/icons/delete.svg" alt="Edit" height="20px" />
+      </span>
+    </div>
+    <div class="task-details">
+      <span class="task-id">#{{ task.id }}</span>
+      <span class="opened">Opened 10 days ago by Yash Ghori</span>
+    </div>
+  </div>
+  <div class="task-status">
+    <span class="status canceled">{{ task.status }}</span>
+  </div>
+  <div class="task-footer">
+    <div class="task-timer">
+      <span class="icon">⏳</span>
+      <span>{{ task.dueDate }}</span>
+    </div>
+    <div class="task-assignee">
+      <img src="https://i.pravatar.cc/300" alt="Assignee" class="avatar" />
+    </div>
+    <div class="task-comments">
+      <span class="icon">💬</span>
+    </div>
+  </div>
+</div>
