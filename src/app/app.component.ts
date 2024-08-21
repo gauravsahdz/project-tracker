@@ -41,7 +41,7 @@ export class AppComponent {
   ];
 
   ngOnInit() {
-    localStorage.setItem('projects', JSON.stringify(this.projects));
-    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    // localStorage.setItem('projects', JSON.stringify(this.projects));
+    // localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 }
