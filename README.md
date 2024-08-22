@@ -1,27 +1,94 @@
-# ProjectManagement
+# Project Tracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+A web application for managing and tracking projects, tasks, and team members. Built with Angular.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Create, view, and manage projects
+- Add tasks with priority, status, and assignee details
+- Manage team members and assign roles
+- Pagination for managing large project lists
+- Responsive design
 
-## Code scaffolding
+## Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Frontend:** Angular, SCSS
+- **Forms:** Reactive Forms in Angular
 
-## Build
+## Folder Structure
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The folder structure of the project is organized to maintain scalability and clarity.
 
-## Running unit tests
+````bash
+src/
+│
+├── app/
+│   ├── core/                 # Core services and utilities
+│   │   └── services/         # Project-wide services (e.g., ProjectService)
+│   │
+│   ├── pages/                # Pages (routing modules)
+│   │   ├── project/          # Project-related modules (List, Create, Details)
+│   │   │   ├── project-list/ # List all projects
+│   │   │   ├── project-create/ # Create new project
+│   │   │   └── project-detail/ # View project details
+│   │   ├── task/             # Task-related modules
+│   │   │   └── task-create/  # Create tasks in projects
+│   │   └── dashboard/        # Main dashboard
+│   │
+│   ├── shared/               # Shared components, directives, and pipes
+│   │   ├── components/       # Reusable components (e.g., Button, Card, Pagination)
+│   │   ├── directives/       # Common directives used across the project
+│   │   └── pipes/            # Common pipes for data transformation
+│   │
+│   ├── assets/               # Static assets (images, fonts, etc.)
+│   ├── environments/         # Environment configuration files
+│   └── styles/               # Global styles and theming
+│
+└── index.html                # Entry point for the application
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Key Components
 
-## Running end-to-end tests
+- **`app/pages/project`**
+  - `ProjectListComponent`: Displays a list of projects.
+  - `ProjectCreateComponent`: Handles project creation.
+  - `ProjectDetailComponent`: Shows details for a specific project.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **`app/pages/task`**
+  - `TaskCreateComponent`: A form for creating tasks within a project.
 
-## Further help
+- **`app/shared/components`**
+  - `ButtonComponent`: A reusable button with configurable labels and actions.
+  - `CardComponent`: Displays project information in card format.
+  - `PaginationComponent`: Controls pagination for project lists.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Installation and Setup
+
+#### Prerequisites
+
+- [Node.js](https://nodejs.org/en/) (v16.x or higher recommended)
+- [Angular CLI](https://angular.io/cli)
+
+#### Steps to Run Locally
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/gauravsahdz/project-tracker.git
+   cd project-tracker
+````
+
+2. **Intall Dependencies**
+
+```bash
+npm install
+```
+
+3. **Run server**
+
+```bash
+ng serve
+```
+
+# The Project is deployed on below URL:
+
+https://project-tracker-v1.netlify.app
